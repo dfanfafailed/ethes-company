@@ -20,8 +20,9 @@ class Home extends CI_Controller {
 		$this->load->model('Sejarah_model');     
 		$this->load->model('Tentang_model');     
 		$this->load->model('Visimisi_model');     
+		$this->load->model('Tampilan_model');
 		$this->load->model('Tampilan_model');     
-        $this->load->helper(array('form', 'url', ));
+    $this->load->helper(array('form', 'url', ));
     }
 	
     public function index()
@@ -51,7 +52,7 @@ class Home extends CI_Controller {
 		$data['sejarah'] = $this->db->get('sejarah')->result_array();
 
 
-		$this->load->view('template/home_header', );
+		$this->load->view('template/home_header');
 		$this->load->view('template/home_navbar', $data);
 		$this->load->view('home/about', $data);
 		$this->load->view('template/home_footer', $data);
@@ -62,7 +63,7 @@ class Home extends CI_Controller {
 		$data['tampilan'] = $this->db->get('tampilan')->result_array();
 		$data['busines'] = $this->db->get('busines_unit')->result_array();
 
-		$this->load->view('template/home_header', );
+		$this->load->view('template/home_header' );
 		$this->load->view('template/home_navbar', $data);
 		$this->load->view('home/busines/busines_unit', $data);
 		$this->load->view('template/home_footer', $data);

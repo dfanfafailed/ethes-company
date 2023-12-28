@@ -41,7 +41,7 @@ class Tampilan_model extends CI_Model{
 
             $this->upload->initialize($config);
 
-            $this->upload->do_upload('logo', 'background', );
+            $this->upload->do_upload('logo', 'background' );
             $logo = $this->upload->data();
             $background = $this->upload->data();
 
