@@ -20,7 +20,7 @@
                   <p class="grid-header">Tambah Admin </p>
                   <div class="grid-body">
                     <div class="item-wrapper">
-                      <?php echo form_open_multipart('visinisi/add_visimisi'); ?>
+                      <?php echo form_open_multipart('visimisi/add_visimisi'); ?>
 
                       <?php if (isset($error)) : ?>
 				                <div class="invalid-feedback"><?= $error ?></div>
@@ -28,13 +28,13 @@
 
                     
                         <div class="form-group">
-                            <label for="inputEmail1">Tentang</label>
-                            <textarea name="tentang" id="tentang" class="form-control" cols="30" rows="10"></textarea>
+                            <label for="inputEmail1">Visi</label>
+                            <textarea name="visi" id="visi" class="form-control" cols="30" rows="10"></textarea>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="inputEmail1">Tentang</label>
-                            <textarea name="tentang" id="tentang" class="form-control" cols="30" rows="10"></textarea>
+                            <label for="inputEmail1">Misi</label>
+                            <textarea name="misi" id="misi" class="form-control" cols="30" rows="10"></textarea>
                         </div>
                         
                     
@@ -54,5 +54,6 @@
           </div>
           <script src="<?php echo base_url();?>assets/plugins/ckeditor/ckeditor.js"></script>
 <script>
-  CKEDITOR.replace('tentang');
+  CKEDITOR.replace('visi');
+  CKEDITOR.replace('misi');
 </script>

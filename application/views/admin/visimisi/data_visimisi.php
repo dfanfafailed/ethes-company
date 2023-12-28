@@ -20,7 +20,7 @@
                   <a href="<?= base_url('visimisi/create_data') ?>" data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-primary mb-3 btn-sm">Create Data</a>
                 </div>
                   
-                <?php foreach ($visimisi as $s):?>
+                <?php foreach ($visimisi as $v):?>
                   <div class="card mb-3" >
                   <div class="row g-0">
                     <div class="col-md-4">

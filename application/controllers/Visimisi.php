@@ -18,7 +18,7 @@ class Visimisi extends CI_Controller {
         $data['keterangan'] = 'Administator';
 
 
-        $data['berita'] = $this->db->get('blog')->result_array();
+        $data['visimisi'] = $this->db->get('visi_misi')->result_array();
 
         // Load view to display services
         $this->load->view('template/admin_header');
@@ -37,11 +37,11 @@ class Visimisi extends CI_Controller {
         $this->load->view('template/admin_header');
         $this->load->view('template/admin_navbar');
         $this->load->view('template/admin_sidebar', $data);
-        $this->load->view('admin/visimisi/visimisi_create', $data);
+        $this->load->view('admin/visimisi/create_visimisi', $data);
         $this->load->view('template/admin_footer');   
     }
 
-    public function add_berita()
+    public function add_visimisi()
 	{
         $this->Visimisi_model->create();
 
@@ -57,11 +57,11 @@ class Visimisi extends CI_Controller {
         $data['keterangan'] = 'Administator';
     
         // Retrieve the existing data for the specified ID
-        $berita = $this->Visimisi_model->getRecordById($id);
+        $visimisi = $this->Visimisi_model->getRecordById($id);
     
-        if ($berita) {
+        if ($visimisi) {
             // Load the edit view with the existing data
-            $data['berita'] = $berita;
+            $data['visimisi'] = $visimisi;
             $this->load->view('template/admin_header');
             $this->load->view('template/admin_navbar');
             $this->load->view('template/admin_sidebar', $data);
