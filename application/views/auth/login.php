@@ -4,7 +4,7 @@
         <div class="signin-signup">
           <form action="<?= base_url('auth'); ?>" method="POST" class="sign-in-form">
 
-            <h2 class="title">Sign in</h2>
+            <h2 class="title">Login</h2>
             <?= $this->session->flashdata('pesan'); ?>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -41,13 +41,12 @@
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
-            <h3>New here ?</h3>                 
+            <h3>Belum punya akun?</h3>                 
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+              Lakukan registrasi terlebih dahaulu!
             </p>
             <button class="btn transparent" id="sign-up-btn">
-              Sign up
+              Registrasi
             </button>
           </div>
           <img src="<?=base_url('login/');?>img/log.svg" class="image" alt="" />

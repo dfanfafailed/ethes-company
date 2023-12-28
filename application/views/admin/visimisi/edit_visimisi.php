@@ -20,18 +20,22 @@
                   <p class="grid-header">Edit Data organisasi</p>
                   <div class="grid-body">
                     <div class="item-wrapper">
-                      <form action="<?php echo base_url('tentang/update/' . $tentang['id_tentang']); ?>" method="POST" enctype="multipart/form-data">
+                      <form action="<?php echo base_url('visimisi/update/' . $visimisi['id']); ?>" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                          <label for="inputEmail1">Tentang</label>
-                          <textarea name="tentang" id="tentang"  class="form-control" cols="30" rows="10" > <?=$tentang['tentang'];?></textarea>
+                          <label for="inputEmail1">Visi</label>
+                          <textarea name="visi" id="visi"  class="form-control" cols="30" rows="10" > <?=$visimisi['visi'];?></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail1">Misi</label>
+                          <textarea name="misi" id="misi"  class="form-control" cols="30" rows="10" > <?=$visimisi['misi'];?></textarea>
                         </div>
                         <div class="form-group">
                           <label for="inputPassword1">Gambar</label>
-                          <input type="file" name="image" class="form-control" id="image" placeholder="Gambar" value="<?= $tentang['image'];?>"><br>
-                          <img src="<?= base_url('/upload/img/tentang/'.$tentang['image']); ?>" alt="Foto struktur" width="150">
+                          <input type="file" name="image" class="form-control" id="image" placeholder="Gambar" value="<?= $visimisi['image'];?>"><br>
+                          <img src="<?= base_url('/upload/img/visi_misi/'.$visimisi['image']); ?>" alt="Foto struktur" width="150">
                         </div>
                         <button type="submit" class="btn btn-sm btn-success">+ Update</button>
-                        <a href="<?=base_url('tentang');?>" class="btn btn-sm btn-danger">< Kembali</a>
+                        <a href="<?=base_url('visimisi');?>" class="btn btn-sm btn-danger">< Kembali</a>
                       </form>
                     </div>
                   </div>
@@ -43,5 +47,6 @@
 
 <script src="<?php echo base_url();?>assets/plugins/ckeditor/ckeditor.js"></script>
 <script>
-  CKEDITOR.replace('tentang');
+  CKEDITOR.replace('visi');
+  CKEDITOR.replace('misi');
 </script>

@@ -2,11 +2,13 @@
  <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="<?=base_url('front-end/');?>index.html" class="logo d-flex align-items-center">
+      <a href="<?=base_url('home');?>" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <img id="logo" src="<?=base_url('front-end/');?>assets/img/lido29.png" >
-        <h1>LIDO29<span>.</span></h1>
+        <?php foreach ($tampilan as $t):?>
+        <img id="logo" src="<?= base_url('upload/img/tampilan/'.$t['logo']); ?>" >
+        <h1><?=$t['logo_text'];?><span>.</span></h1>
+        <?php endforeach;?>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>

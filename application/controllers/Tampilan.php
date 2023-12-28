@@ -1,30 +1,31 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Banner extends CI_Controller {
+class Tampilan extends CI_Controller {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Banner_model');   
+        $this->load->model('Tampilan_model');   
         $this->load->helper(array('form', 'url'));
 
     }
 
     public function index() 
     {
-
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])
         ->row_array();
         $data['keterangan'] = 'Administator';
 
-        $data['banner'] = $this->db->get('banner_img')->result_array();
+        $this->load->helper('url');
 
-        // Load view to display services
+        $data['tampilan'] = $this->db->get('tampilan')->result_array();
+
+
         $this->load->view('template/admin_header');
         $this->load->view('template/admin_navbar');
         $this->load->view('template/admin_sidebar', $data);
-        $this->load->view('admin/banner_image/data_banner', $data);
+        $this->load->view('admin/tampilan/data_tampilan', $data);
         $this->load->view('template/admin_footer');
     }
 
@@ -37,36 +38,36 @@ class Banner extends CI_Controller {
         $this->load->view('template/admin_header');
         $this->load->view('template/admin_navbar');
         $this->load->view('template/admin_sidebar', $data);
-        $this->load->view('admin/banner_image/create_banner');
+        $this->load->view('admin/tampilan/create_tampilan');
         $this->load->view('template/admin_footer');   
     }
 
-    public function add_banner()
+    public function add_tampilan()
 	{
-        $this->Banner_model->create();
-
+        $this->Tampilan_model->create();
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" 
         role="alert"> 
-        Selamat, data banner menu anda sudah ditambahkan! </div>');
-        redirect('banner');
+        Selamat, data pelayanan anda sudah ditambahkan! </div>');
+        redirect('tampilan');
     }
 
 
+    
     public function edit($id) {
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])
         ->row_array();
         $data['keterangan'] = 'Administator';
     
         // Retrieve the existing data for the specified ID
-        $banner = $this->Banner_model->getRecordById($id);
+        $tampilan = $this->Tampilan_model->getRecordById($id);
     
-        if ($banner) {
+        if ($tampilan) {
             // Load the edit view with the existing data
-            $data['banner'] = $banner;
+            $data['tampilan'] = $tampilan;
             $this->load->view('template/admin_header');
             $this->load->view('template/admin_navbar');
             $this->load->view('template/admin_sidebar', $data);
-            $this->load->view('admin/banner/banner_edit', $data);
+            $this->load->view('admin/tampilan/edit_tampilan', $data);
             $this->load->view('template/admin_footer');  
         } else {
             // Handle the case where the record with the given $id is not found
@@ -75,46 +76,58 @@ class Banner extends CI_Controller {
     }
 
     public function update($id) {
+        // Retrieve the input data from the form submission
         $this->load->library('upload');
 
-
-            // Cek apakah ada file gambar yang diupload
-            if (!empty($_FILES['image']['name'])) {
-                $config['upload_path'] = FCPATH . '/upload/img/banner/';
+        $logo       = $this->input->post('logo');
+        $deskripsi_layanan  = $this->input->post('deskripsi_layanan');
+        $foto               = $this->input->post('foto');
+    
+        
+      if (!empty($_FILES['foto']['name'])) {
+                $config['upload_path'] = FCPATH . '/upload/img/tampilan';
                 $config['allowed_types'] = 'jpeg|jpg|png|gif';
 
                 $this->upload->initialize($config);
 
-                if ($this->upload->do_upload('image')) {
-                    $image = $this->upload->data();
-                    $file = $image['file_name'];
+                if ($this->upload->do_upload('foto')) {
+                    $foto = $this->upload->data();
+                    $file = $foto['file_name'];
                 } else {
                     $error = $this->upload->display_errors();
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">' . $error . '</div>');
-                    redirect('banner');
+                    redirect('service');
                 }
             }
 
             // Update data hanya jika ada file gambar baru diupload
             if (isset($file)) {
-                $this->db->set('image', $file);
+                $this->db->set('foto', $file);
             }
 
-            $this->db->where('id_distributor', $id);
-            $this->db->update('distributor');
+            $this->db->set('nama_layanan', $nama_layanan);
+            $this->db->set('deskripsi_layanan', $deskripsi_layanan);
+            $this->db->where('id_service', $id);
+            $this->db->update('service');
+    
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success" 
+            role="alert"> 
+            Data pelayanan anda berhasil di edit! </div>');
+            redirect('service');
 
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data distributor anda berhasil di edit!</div>');
+            
+    }
+    
+    public function hapus_service($id)
+    {
+
+        $this->Tampilan_model->hapus('service',   $id);
+        redirect('service');
+
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger" 
+            role="alert"> 
+            Data pelayanan anda gagal di edit! </div>');
             redirect('distributor');
 
-        
-    }
-
-    public function hapus_banner($id) 
-    {
-        $this->Banner_model->hapus('banner_img',   $id);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-danger" 
-        role="alert"> 
-        Data banner menu anda sudah di hapus! </div>');
-        redirect('banner');
     }
 }

@@ -65,7 +65,7 @@ class Visimisi extends CI_Controller {
             $this->load->view('template/admin_header');
             $this->load->view('template/admin_navbar');
             $this->load->view('template/admin_sidebar', $data);
-            $this->load->view('admin/berita/edit_berita', $data);
+            $this->load->view('admin/visimisi/edit_visimisi', $data);
             $this->load->view('template/admin_footer');  
         } else {
             // Handle the case where the record with the given $id is not found
@@ -76,14 +76,12 @@ class Visimisi extends CI_Controller {
     public function update($id) {
         $this->load->library('upload');
 
-            $judul = $this->input->post('judul');
-            $isi_blog = $this->input->post('isi_blog');
-            $created_by = $this->input->post('created_by');
-            $link = $this->input->post('link');
-
+            $judul = $this->input->post('visi');
+            $isi_blog = $this->input->post('misi');
+    
             // Cek apakah ada file gambar yang diupload
             if (!empty($_FILES['image']['name'])) {
-                $config['upload_path'] = FCPATH . '/upload/img/berita/';
+                $config['upload_path'] = FCPATH . '/upload/img/visi/_misi/';
                 $config['allowed_types'] = 'jpeg|jpg|png|gif';
 
                 $this->upload->initialize($config);
@@ -94,7 +92,7 @@ class Visimisi extends CI_Controller {
                 } else {
                     $error = $this->upload->display_errors();
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">' . $error . '</div>');
-                    redirect('berita');
+                    redirect('visimisi');
                 }
             }
 
@@ -103,24 +101,23 @@ class Visimisi extends CI_Controller {
                 $this->db->set('image', $file);
             }
 
-            $this->db->set('judul', $judul);
-            $this->db->set('isi_blog', $isi_blog);
-            $this->db->set('created_by', $created_by);
+            $this->db->set('visi', $visi);
+            $this->db->set('misi', $misi);
             $this->db->where('id', $id);
-            $this->db->update('blog');
+            $this->db->update('visi_misi');
 
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data berita anda berhasil di edit!</div>');
-            redirect('berita');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data visi misi anda berhasil di edit!</div>');
+            redirect('visimisi');
 
         
     }
 
-    public function hapus_berita($id) 
+    public function hapus_visimisi($id) 
     {
-        $this->Visimisi_model->hapus('blog',   $id);
+        $this->Visimisi_model->hapus('visi_misi',   $id);
         $this->session->set_flashdata('pesan', '<div class="alert alert-danger" 
         role="alert"> 
-        Data berita menu anda sudah di hapus! </div>');
-        redirect('berita');
+        Data visi misi anda sudah di hapus! </div>');
+        redirect('visimisi');
     }
 }

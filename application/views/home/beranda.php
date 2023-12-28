@@ -1,24 +1,26 @@
 <section id="hero" class="hero">
   
   <div class="info d-flex align-items-center">
-    <?php foreach ($banner as $b) : ?>
     <div class="container">
       <div class="row justify-content-center">
         
+      <?php foreach ($tampilan as $t):?>
         <div class="col-lg-6 text-center">
-        <h2 data-aos="fade-down"><?=$b['text'];?></h2>
-        <p data-aos="fade-up"><?=$b['sub'];?></p>
-        <!-- <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Get Started</a> -->
+          <h2 data-aos="fade-down"><?=$t['text'];?></h2>
+          <p data-aos="fade-up"><?=$t['sub_text'];?></p>
+          <!-- <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Get Started</a> -->
+        </div>
+        <?php endforeach;?>
       </div>
+      
     </div>
-
+    
   </div>
-
-</div>
-
-<div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
   
-  
+  <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    
+    <?php foreach ($banner as $b) : ?>
+    
   <div class="carousel-item active" style="background-image: url(<?= base_url('upload/img/banner/'.$b['image']); ?>)">
   </div>
   <?php endforeach; ?>
@@ -69,31 +71,24 @@
   <section id="alt-services" class="alt-services">
         <div class="container" data-aos="fade-up">
   
+        <?php foreach ($visimisi as $v) : ?>
           <div class="row justify-content-around gy-4">
-            <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in"
+            <div class="col-lg-6 img-bg" style="background-image: url(<?= base_url('upload/img/visi_misi/'.$v['image']); ?>);" data-aos="zoom-in"
               data-aos-delay="100"></div>
   
             <div class="col-lg-5 d-flex flex-column justify-content-center">
               <h3>Visi dan Misi LIDO29</h3>
               <h5>Visi</h5>
-              <p>Menjadi perusahaan penyedia solusi kebutuhan masyarakat yang berskala nasional dengan mengedepankan teknologi informasi dan komunikasi yang cepat fokus dan fleksibel.</p>
+              <p><?=$v['visi'];?></p>
   
               <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">            
                 <div>
                   <h5>Misi</h5>
-                  <p>1. Menghasilkan laba yang pantas untuk mendukung pengembangan perusahaan.</p>
-                  <p>2. Menyediakan berbagai jenis produk FMCG dan pendukungnya sebagai solusi 
-                    yang sesuai dengan kebutuhan industri pemerintah dan masyarakat dengan mutu 
-                    harga dan pasokan yang berdaya saing tinggi melalui pengelolaan terpercaya 
-                    demi kepuasan pelanggan. </p>
-                    <p>3. Memberikan penghargaan kepada seluruh karyawan dan staf melalui pemberian 
-                      kesejahteraan yang memadai dan kesempatan untuk pegembangan karir serta melakukan 
-                      inovasi secara terus menerus. </p>
-                    <p>4. Menjalin kemitraan kerjasama dengan pemasok dan penyalur yang saling menguntungkan.</p>
-                    <p>5. Memberikan perhatian yang tulus kepada masyarakat melalui pemberdayaan pelatihan 
-                      dan penciptaan lapangan kerja.</p>
+                  <p><?=$v['misi'];?></p>
+                  
                 </div>
               </div><!-- End Icon Box -->
+              <?php endforeach;?>
       </section><!-- End Alt Services Section -->
 
 
@@ -230,7 +225,7 @@
         <div class="row">
 
           <div class="col-auto">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
+            <div class="stats-item d-flex align-items-center  ">
               <i class="bi bi-database color-blue flex-shrink-0"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"

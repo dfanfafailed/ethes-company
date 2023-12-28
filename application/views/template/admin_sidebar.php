@@ -19,12 +19,7 @@
               <i class="mdi mdi-gauge link-icon"></i>
             </a>
           </li>
-          <li>
-            <a href="<?= BASEURL?>user">
-              <span class="link-title">Kelola Akun</span>
-              <i class="mdi mdi-folder-account link-icon"></i>
-            </a>
-          </li>
+         
 
           <li>
             <a href="#ui-elements" data-toggle="collapse" aria-expanded="false">
@@ -32,9 +27,6 @@
               <i class="mdi mdi-view-dashboard link-icon"></i>
             </a>
             <ul class="collapse navigation-submenu" id="ui-elements">
-              <li>
-                <a href="<?=base_url('banner');?>">Banner Image</a>
-              </li>
               <li>
                 <a href="<?=base_url('tentang');?>">Tentang</a>
               </li>
@@ -102,9 +94,7 @@
               </li>
               <li>
                 <a href="<?= base_url('plan')?>">Plan Pertumbuhan</a>
-              </li>
-             
-              
+              </li> 
             </ul>
           </li>
          
@@ -114,8 +104,29 @@
               <i class="mdi mdi-newspaper link-icon"></i>
             </a>
           </li>
+          <li class="nav-category-divider">TAMPILAN</li>
           <li>
-          
+            <a href="#Tampilan" data-toggle="collapse" aria-expanded="false">
+              <span class="link-title">Tampilan</span>
+              <i class="mdi mdi-domain link-icon"></i>
+            </a>
+            <ul class="collapse navigation-submenu" id="Tampilan">
+            <li>
+                <a href="<?=base_url('banner');?>">Banner Image</a>
+              </li>
+              <li>
+                <a href="<?= base_url('plan')?>">Plan Pertumbuhan</a>
+              </li> 
+            </ul>
+          </li>
+
+          <li class="nav-category-divider">WEBSITE</li>
+          <li>
+            <a href="<?=base_url('home');?>" target="_blank">
+              <span class="link-title">Kunjungi Website</span>
+              <i class="mdi mdi-web link-icon"></i>
+            </a>
+          </li>
         </ul>
         <div class="sidebar-upgrade-banner">
         <a href="#" class="btn btn-danger text-center" id="logoutButton" data-toggle="modal" data-target="#logoutModal"><i class="mdi mdi-logout link-icon"></i>Logout</a>

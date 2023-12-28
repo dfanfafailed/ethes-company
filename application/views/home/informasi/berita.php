@@ -45,7 +45,7 @@
 
                 <hr>
 
-                <a href="<?= base_url('home/detail_informasi/'. $b['id']) ?>" class="readmore stretched-link"><span>Read More</span><i
+                <a href="<?= base_url('home/detail_information/'. $b['id']) ?>" class="readmore stretched-link"><span>Read More</span><i
                     class="bi bi-arrow-right"></i></a>
 
               </div>
@@ -57,8 +57,8 @@
 
         <div class="blog-pagination">
           <ul class="justify-content-center">
-            <li><a href="#">1</a></li>
-            <li class="active"><a href="#">2</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
           </ul>
         </div><!-- End blog pagination -->
