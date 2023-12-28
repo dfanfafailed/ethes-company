@@ -1,7 +1,6 @@
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
 
-    
 
 <div class="footer-legal text-center position-relative">
     <div class="copyright">

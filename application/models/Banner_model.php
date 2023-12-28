@@ -17,8 +17,6 @@ class Banner_model extends CI_Model{
     
     public function create() {
 
-            $text = $this->input->post('text');
-            $sub = $this->input->post('sub');
             $image = $this->input->post('image');
 
             $length = 6;
@@ -31,7 +29,7 @@ class Banner_model extends CI_Model{
 
             $file_name = $code;
             $config['upload_path'] = FCPATH.'/upload/img/banner/';;
-            $config['allowed_types'] = 'jpg|png|gif';
+            $config['allowed_types'] = 'jpg|jpeg|png|gif';
             $config['file_name'] = $file_name;
             $config['overwrite'] = true;
 
@@ -41,8 +39,6 @@ class Banner_model extends CI_Model{
             $image = $this->upload->data();
 
         $data = [
-            'text' => $text,
-            'sub' => $sub,
             'image' => $image['file_name']
         ];
 

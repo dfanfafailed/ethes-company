@@ -17,7 +17,7 @@
             <div class="col-lg-12">
                 <div class="grid">
                   <p class="grid-header">Table Tentang</p>
-                  <a href="<?= base_url('tentang/create_data') ?>" data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-primary mb-3 btn-sm">Create Data</a>
+                  <!-- <a href="<?= base_url('tentang/create_data') ?>" data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-primary mb-3 btn-sm">Create Data</a> -->
                 </div>
                   
                 <?php foreach ($tentang as $s):?>
@@ -30,10 +30,10 @@
                      
                         <h5 class="card-title">Tentang</h5>
                         <p class="card-text"><?=$s['tentang'];?></p>
-                      </div>
-                      <div class="card-body text-right">
-                      <a href="<?= base_url('tentang/edit/'. $s['id_tentang']) ?>" class="btn btn-sm btn-success" ><i class="mdi mdi-pencil"></i></a>
-                        <a href="<?= base_url('tentang/hapus_tentang/'. $s['id_tentang']) ?>" onclick="return confirm('Apakah anda yakin ingin menghapus file gambar ini?')"class="btn btn-sm btn-danger" ><i class="mdi mdi-backspace" ></i></a>
+                        <div class="card-body text-right">
+                        <a href="<?= base_url('tentang/edit/'. $s['id_tentang']) ?>" class="btn btn-sm btn-success" ><i class="mdi mdi-pencil"></i></a>
+                          <a href="<?= base_url('tentang/hapus_tentang/'. $s['id_tentang']) ?>" onclick="return confirm('Apakah anda yakin ingin menghapus file gambar ini?')"class="btn btn-sm btn-danger" ><i class="mdi mdi-backspace" ></i></a>
+                        </div>
                       </div>
                   </div>
                 </div>

@@ -31,8 +31,6 @@
                         <thead>
                           <tr>
                           <th>Image</th>
-                          <th>text</th>
-                          <th>Sub</th>
                           <th>Aksi</th>
                           </tr>
                         </thead>
@@ -41,8 +39,6 @@
 
                           <tr>
                           <td><img src="<?= base_url('upload/img/banner/'.$b['image']); ?>" alt="Foto Banner" style="width: 150px;"></td>
-                            <td><?php echo $b['text']; ?></td>
-                            <td><?php echo $b['sub']; ?></td>
                             <td>
                                 <a href="<?= base_url('banner/edit_data/'. $b['id']) ?>" class="btn btn-success btn-sm" >Edit</a>
                                 <a href="<?php echo base_url('banner/hapus_banner/' . $b['id']); ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus layanan ini?')" class="btn btn-danger btn-sm">Hapus</a>

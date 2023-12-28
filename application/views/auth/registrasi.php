@@ -3,7 +3,7 @@
       <div class="forms-container">
         <div class="signin-signup">
           <form action="<?=base_url('auth/register');?>" method="POST" class="sign-in-form">
-            <h2 class="title">Sign in</h2>
+            <h2 class="title">Registrasi</h2>
 
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -54,7 +54,7 @@
           <div class="content">
             <h3>Sudah punya akun ?</h3>
             <p>
-              Jika anda sudah punya akun, silahkan login
+              Silahkan login
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Login
