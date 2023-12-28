@@ -17,7 +17,7 @@
             <div class="row">
               <div class="col equel-grid">
                 <div class="grid">
-                  <p class="grid-header">Tambah Admin </p>
+                  <p class="grid-header">Tambah Berita </p>
                   <div class="grid-body">
                     <div class="item-wrapper">
                       <?php echo form_open_multipart('berita/add_berita'); ?>
@@ -25,15 +25,11 @@
                       <?php if (isset($error)) : ?>
 				                <div class="invalid-feedback"><?= $error ?></div>
 				              <?php endif; ?>
-
-                    
                       
                       <div class="form-group">
                           <label for="inputEmail1">Judul</label>
                           <input type="text" name="judul" class="form-control" id="inputEmail1" placeholder=" Judul">
                         </div>
-
-                    
 
                         <div class="form-group">
                             <label for="inputEmail1">isi_blog</label>
@@ -42,7 +38,7 @@
                         
                         <div class="form-group">
                           <label for="inputEmail1">Created by</label>
-                          <input type="text" name="created_by" class="form-control" id="inputEmail1" placeholder=" Judul">
+                          <input type="text" name="created_by" class="form-control" id="inputEmail1" placeholder=" Created By">
                         </div>
                     
                         <div class="form-group">

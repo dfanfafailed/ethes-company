@@ -31,7 +31,7 @@ class Service_model extends CI_Model{
             }
 
             $file_name = $code;
-            $config['upload_path'] = FCPATH.'/upload/img/';;
+            $config['upload_path'] = FCPATH.'/upload/img/';
             $config['allowed_types'] = 'jpg|png|gif';
             $config['file_name'] = $file_name;
             $config['overwrite'] = true;

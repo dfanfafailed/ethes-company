@@ -18,7 +18,7 @@ class Budaya extends CI_Controller {
         $data['keterangan'] = 'Administator';
 
 
-        $data['budaya '] = $this->db->get('budaya')->result_array();
+        $data['budaya'] = $this->db->get('budaya')->result_array();
 
         // Load view to display services
         $this->load->view('template/admin_header');
@@ -28,7 +28,7 @@ class Budaya extends CI_Controller {
         $this->load->view('template/admin_footer');
     }
 
-    public function create_data() 
+    public function create() 
     {
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])
         ->row_array();
@@ -37,7 +37,7 @@ class Budaya extends CI_Controller {
         $this->load->view('template/admin_header');
         $this->load->view('template/admin_navbar');
         $this->load->view('template/admin_sidebar', $data);
-        $this->load->view('admin/budaya/budaya_create', $data);
+        $this->load->view('admin/budaya/create', $data);
         $this->load->view('template/admin_footer');   
     }
 
@@ -60,15 +60,15 @@ class Budaya extends CI_Controller {
         $data['keterangan'] = 'Administator';
     
         // Retrieve the existing data for the specified ID
-        $distributor = $this->Distributor_model->getRecordById($id);
-    
-        if ($distributor) {
+        $budaya = $this->Budaya_model->getRecordById($id);
+
+        if ($budaya) {
             // Load the edit view with the existing data
-            $data['distributor'] = $distributor;
+            $data['budaya'] = $budaya;
             $this->load->view('template/admin_header');
             $this->load->view('template/admin_navbar');
             $this->load->view('template/admin_sidebar', $data);
-            $this->load->view('admin/budaya/budaya_edit', $data);
+            $this->load->view('admin/budaya/edit', $data);
             $this->load->view('template/admin_footer');  
         } else {
             // Handle the case where the record with the given $id is not found
@@ -78,39 +78,43 @@ class Budaya extends CI_Controller {
 
     public function update($id) {
         // Retrieve the input data from the form submission
-        $budaya      = $this->input->post('budaya');
+       $this->load->library('upload');
+
+        $budaya       = $this->input->post('budaya');
         $keterangan  = $this->input->post('keterangan');
-        $icon        = $this->input->post('icon');
-        $image       = $this->input->post('image');
+        $image               = $this->input->post('image');
     
         
-    
-        // Configuration for image upload
-        $config['upload_path'] = FCPATH . '/upload/img/budaya/';
-        $config['allowed_types'] = 'jpeg|jpg|png|gif';
-        // You may want to set a new file name for the updated image
-        // $config['file_name'] = $new_file_name; 
-    
-        $this->upload->initialize($config);
-    
-        $this->upload->do_upload('image');
-            // If the upload is successful, get the new image data
-            $image = $this->upload->data();
-            $file = $image['file_name'];
-            // Update the database with the new data
-            $data = [
-                'budaya'     => $budaya,
-                'keterangan' => $keterangan,
-                'icon'       => $icon,
-                'image'      => $file
-            ];
-            $this->Budaya_model->update('budaya',$id, $data);
+      if (!empty($_FILES['image']['name'])) {
+                $config['upload_path'] = FCPATH . '/upload/img/budaya';
+                $config['allowed_types'] = 'jpeg|jpg|png|gif';
+
+                $this->upload->initialize($config);
+
+                if ($this->upload->do_upload('image')) {
+                    $image = $this->upload->data();
+                    $file = $image['file_name'];
+                } else {
+                    $error = $this->upload->display_errors();
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">' . $error . '</div>');
+                    redirect('budaya');
+                }
+            }
+
+            // Update data hanya jika ada file gambar baru diupload
+            if (isset($file)) {
+                $this->db->set('image', $file);
+            }
+
+            $this->db->set('budaya', $budaya);
+            $this->db->set('keterangan', $keterangan);
+            $this->db->where('id', $id);
+            $this->db->update('budaya');
     
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" 
             role="alert"> 
-            Data distributor anda berhasil di edit! </div>');
-            redirect('budaya');
-        }
+            Data pelayanan anda berhasil di edit! </div>');
+            redirect('budaya');        }
 
     public function hapus_budaya($id) 
     {

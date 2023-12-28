@@ -83,7 +83,6 @@ class Service extends CI_Controller {
         $deskripsi_layanan  = $this->input->post('deskripsi_layanan');
         $foto               = $this->input->post('foto');
     
-        
       if (!empty($_FILES['foto']['name'])) {
                 $config['upload_path'] = FCPATH . '/upload/img/';
                 $config['allowed_types'] = 'jpeg|jpg|png|gif';
@@ -100,7 +99,6 @@ class Service extends CI_Controller {
                 }
             }
 
-            // Update data hanya jika ada file gambar baru diupload
             if (isset($file)) {
                 $this->db->set('foto', $file);
             }
@@ -112,7 +110,7 @@ class Service extends CI_Controller {
     
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" 
             role="alert"> 
-            Data pelayanan anda berhasil di edit! </div>');
+            Data berhasil di edit! </div>');
             redirect('service');
 
             

@@ -37,7 +37,7 @@ class Berita extends CI_Controller {
         $this->load->view('template/admin_header');
         $this->load->view('template/admin_navbar');
         $this->load->view('template/admin_sidebar', $data);
-        $this->load->view('admin/berita/berita_create', $data);
+        $this->load->view('admin/berita/create_berita', $data);
         $this->load->view('template/admin_footer');   
     }
 

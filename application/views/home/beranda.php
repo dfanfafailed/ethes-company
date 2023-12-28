@@ -98,7 +98,8 @@
 
 
       <section id="alt-services-2" class="alt-services section-bg">
-      <div class="container" data-aos="fade-up">
+
+      <!-- <div class="container" data-aos="fade-up">
 
         <div class="row justify-content-around gy-4">
           <div class="col-lg-5 d-flex flex-column justify-content-center">
@@ -110,7 +111,7 @@
                 <h6>LINCAH ( AGILE AND INNOVATIVE )</h6>
                 <p>Kami bergerak mengikuti perubahan perilaku konsumen dan terus berproses menciptakan nilai kreasi untuk pelanggan. </p>
               </div>
-            </div><!-- End Icon Box -->
+            </div>
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-patch-check flex-shrink-0"></i>
@@ -119,7 +120,7 @@
                 <p>Kami menjaga komitmen untuk melaksanakan pekerjaan dengan cara yang jujur hingga menghasilkan hasil kerja yang memuaskan bagi pelanggan.
                 </p>
               </div>
-            </div><!-- End Icon Box -->
+            </div>
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-brightness-high flex-shrink-0"></i>
@@ -128,7 +129,7 @@
                 <p>Kami dengan cara berpikir, bersikap,dan bertindak yang menilai sama hak dan kewajiban untuk diri kami dan orang lain.
                 </p>
               </div>
-            </div><!-- End Icon Box -->
+            </div>
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-command flex-shrink-0"></i>
@@ -137,14 +138,90 @@
                 <p>Kami sebagai individu yang berakhlak mampu belajar dan bertumbuh sesuai dengan nada dan irama bisnis yang dijalankan.
                 </p>
               </div>
-            </div><!-- End Icon Box -->
+            </div>
           </div>
 
           <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services-2.jpg);" data-aos="zoom-in"
             data-aos-delay="100"></div>
         </div>
 
-      </div>
+      </div> -->
+
+            <!-- <div class="container" data-aos="fade-up">
+
+                <div class="text-center">
+                  <h3>Budaya Kami</h3>
+                </div>
+
+                <div class="row shadow-sm p-3 mb-5 bg-body rounded">
+                  <div class="col">
+                    <div class="row align-items-start">
+                      <div class="col-6">
+                        <img src="assets/img/about.jpg" width="50%" alt="">
+                      </div>
+                      <div class="col-6">
+                        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+                          <i class="bi bi-command flex-shrink-0"></i>
+                          <div>
+                            <h6>OPEN ( OPENNESS IN MIND AND LEARNING )</h6>
+                            <p>Kami sebagai individu yang berakhlak mampu belajar dan bertumbuh sesuai dengan nada dan irama bisnis yang dijalankan.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row shadow-sm p-3 mb-5 bg-body rounded">
+                  <div class="col">
+                    <div class="row align-items-start">
+                      <div class="col-6">
+                        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+                          <i class="bi bi-command flex-shrink-0"></i>
+                          <div>
+                            <p>Kami sebagai individu yang berakhlak mampu belajar dan bertumbuh sesuai dengan nada dan irama bisnis yang dijalankan.
+                            </p>
+                            <h6>OPEN ( OPENNESS IN MIND AND LEARNING )</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <img src="assets/img/about.jpg" width="50%" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div> -->
+
+            
+
+        <div class="" data-aos="fade-up">
+
+          <div class="text-center">
+            <h4>Budaya Kami</h4>
+          </div>
+
+          <div class="row ">
+            <?php foreach ($budaya as $item) { ?>
+              <div class="col-6 d-flex justify-content-center">
+                <div class="card shadow-lg " style="width: 80%;">
+                    <img src="<?= base_url('upload/img/budaya/' . $item['image']) ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+                        <i class="bi bi-command flex-shrink-0"></i>
+                        <div>
+                          <h6><?= $item['budaya'] ?></h6>
+                          <p><?= $item['keterangan'] ?></p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <?php } ?>
+            </div>
+        </div>
+        
     </section><!-- End Alt Services Section 2 -->
 
     <section id="stats-counter" class="stats-counter ">

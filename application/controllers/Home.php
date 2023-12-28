@@ -27,6 +27,7 @@ class Home extends CI_Controller {
         $data['banner'] = $this->db->get('banner_img')->result_array();
 		$data['services'] = $this->db->get('service')->result_array();
 		$data['tentang'] = $this->db->get('tentang')->result_array();
+		$data['budaya'] = $this->db->get('budaya')->result_array();
 
 		$this->load->view('template/home_header');
 		$this->load->view('template/home_navbar');
@@ -106,9 +107,7 @@ class Home extends CI_Controller {
         } else {
             // Handle the case where the record with the given $id is not found
             show_404();
-        }
-
-		
+        }	
 	}
 
 	public function contact() 

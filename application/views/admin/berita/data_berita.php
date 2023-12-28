@@ -7,20 +7,15 @@
                 <li class="breadcrumb-item">
                   <a href="<?=base_url('admin');?>">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item">
-                  <a href="#">About</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">Direksi</li>
+                <li class="breadcrumb-item active" aria-current="page">Berita</li>
               </ol>
             </nav>
-   
-      
 
           <?= $this->session->flashdata('pesan'); ?>
 
             <div class="col-lg-12">
                 <div class="grid">
-                  <p class="grid-header">Table Direksi</p>
+                  <p class="grid-header">Table Berita</p>
 
                   <a class="btn btn-sm btn-primary mb-3 ml-2" href="<?=base_url('berita/create_data');?>" ><i class="mdi mdi-plus-box"></i></a>
                 </div>

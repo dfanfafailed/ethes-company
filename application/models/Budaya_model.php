@@ -19,7 +19,6 @@ class Budaya_model extends CI_Model{
 
             $budaya = $this->input->post('budaya');
             $keterangan = $this->input->post('keterangan');
-            $icon = $this->input->post('icon');
             $image = $this->input->post('image');
 
             $length = 6;
@@ -31,7 +30,7 @@ class Budaya_model extends CI_Model{
             }
 
             $file_name = $code;
-            $config['upload_path'] = FCPATH.'/upload/img/budaya/';;
+            $config['upload_path'] = FCPATH.'/upload/img/budaya/';
             $config['allowed_types'] = 'jpeg|jpg|png|gif';
             $config['file_name'] = $file_name;
             $config['overwrite'] = true;
@@ -44,7 +43,6 @@ class Budaya_model extends CI_Model{
         $data = [
             'budaya'    => $budaya,
             'keterangan'=> $keterangan,
-            'icon'      => $icon,
             'image'     => $image['file_name']
         ];
 
@@ -56,7 +54,7 @@ class Budaya_model extends CI_Model{
     }
 
     public function update($table, $id, $data) {
-		$result = $this->db->where('id_budaya', $id)->update($table, $data);
+		$result = $this->db->where('id', $id)->update($table, $data);
 		return $result;
     }
 
