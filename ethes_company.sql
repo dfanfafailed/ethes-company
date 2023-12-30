@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Des 2023 pada 00.33
--- Versi server: 10.4.27-MariaDB
--- Versi PHP: 8.1.12
+-- Generation Time: 30 Des 2023 pada 03.16
+-- Versi Server: 10.1.9-MariaDB
+-- PHP Version: 7.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -18,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `companyprofil_lido29`
+-- Database: `ethes_company`
 --
 
 -- --------------------------------------------------------
@@ -32,7 +31,7 @@ CREATE TABLE `admin_menu` (
   `nama` varchar(225) NOT NULL,
   `icon` varchar(225) NOT NULL,
   `url` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `admin_menu`
@@ -50,7 +49,7 @@ INSERT INTO `admin_menu` (`id`, `nama`, `icon`, `url`) VALUES
 CREATE TABLE `banner_img` (
   `id` int(11) NOT NULL,
   `image` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `banner_img`
@@ -74,7 +73,7 @@ CREATE TABLE `blog` (
   `created_by` varchar(225) NOT NULL,
   `created_at` int(11) NOT NULL,
   `image` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `blog`
@@ -82,7 +81,10 @@ CREATE TABLE `blog` (
 
 INSERT INTO `blog` (`id`, `judul`, `isi_blog`, `created_by`, `created_at`, `image`) VALUES
 (5, 'Junior Web Developer1', '<p>Panggilan bagi kamu yang ingin menjadi bagian dari Kami Ethes Tech untuk kamu yang berkemauan tinggi untuk belajar Bersama kami ????</p>\r\n\r\n<p>Ayo daftarkan diri kamu sekarang juga, di program Internship untuk Junior Web Developer. ????????\\n\\nSyaratnya mudah kok :\\n1. Masih Menjalani Pendidikan Atau Sudah Lulus SMK/Diploma/Sarjana.\\n2. Sudah Memiliki Basic Skill di Bidang Pemrograman Website (PHP/HTML/CSS Javascript).\\n3. Mampu Bekerja Dalam Team.\\n4. Berkemauan Tinggi Untuk Belajar.\\n\\nMudah bukan buruan join deh !! ☝????☝????☝????\\n\\n✅ Untuk Pendaftarannya kamu Bisa Kirim CV kamu langsung ke Head Office Lido\\nGrosir Kandangan, Temanggung atau\\nKirim Email dengan CV ke rnd@ethes.tech\\n\\n✅ Kontak yang bisa dihubungi WA/TELEGRAM : 08112939780\\n\\n#lido #lido29 #lidogrosir #ethes #magelang #temanggung #wonosobo #semarang #lokertemanggung #lokermagelang #lokerjateng #lokerwonosobo #lokersemarang #disnaker\\n&#39; WHERE `blo[...]</p>\r\n', 'frina1', 1703576924, 'RZ1RA4.png'),
-(6, 'Lagi lagi Lido Grosir ada Promo niiihhh', '<p><strong>Promo Lido Grosir kali ini setiap pembelian FLUFFY Baby Diapers isi 20 FREE 1 Hansanitizer</strong><br />\r\nPopok buat si kecil, jangan coba coba ya bundaa????<br />\r\n<br />\r\nFLUFFY certified lebih Lembut, Bebas Iritasi, 100% dari bahan yang aman untuk kulit si kecil<br />\r\n<em>Free handsanitizer BEBASKAN TANGAN BUNDA DARI KUMAN sebelum dan setelah gantiin popok</em>????<br />\r\n<br />\r\nBONUS TERBATAS, BELI SEKARANG JUGA<br />\r\nPromo tersedia di cabang Lido Grosir<br />\r\n???? Kandangan<br />\r\n???? Wonosobo<br />\r\n???? Kaloran<br />\r\n???? Borobudur<br />\r\n???? Sumowono<br />\r\n???? Tembarak<br />\r\n<br />\r\n<a href=\"https://www.instagram.com/explore/tags/lido/\">#lido</a> <a href=\"https://www.instagram.com/explore/tags/lido29/\">#lido29</a> <a href=\"https://www.instagram.com/explore/tags/lidogrosir/\">#lidogrosir</a> <a href=\"https://www.instagram.com/explore/tags/promolido/\">#promolido</a> <a href=\"https://www.instagram.com/explore/tags/promolidogrosir/\">#promolidogrosir</a> <a href=\"https://www.instagram.com/explore/tags/promo/\">#promo</a> <a href=\"https://www.instagram.com/explore/tags/fluffy/\">#fluffy</a> <a href=\"https://www.instagram.com/explore/tags/promofluffy/\">#promofluffy</a> <a href=\"https://www.instagram.com/explore/tags/lidokandangan/\">#lidokandangan</a> <a href=\"https://www.instagram.com/explore/tags/lidowonosobo/\">#lidowonosobo</a> <a href=\"https://www.instagram.com/explore/tags/lidokaloran/\">#lidokaloran</a> <a href=\"https://www.instagram.com/explore/tags/lidoborobudur/\">#lidoborobudur</a> <a href=\"https://www.instagram.com/explore/tags/lidosumowono/\">#lidosumowono</a> <a href=\"https://www.instagram.com/explore/tags/lidotembarak/\">#lidotembarak</a> <a href=\"https://www.instagram.com/explore/tags/temanggung/\">#temanggung</a> <a href=\"https://www.instagram.com/explore/tags/magelang/\">#magelang</a> <a href=\"https://www.instagram.com/explore/tags/semarang/\">#semarang</a> <a href=\"https://www.instagram.com/explore/tags/wonosobo/\">#wonosobo</a></p>\r\n', 'admin', 1703726570, 'AAW2JL.jpg');
+(6, 'Lagi lagi Lido Grosir ada Promo niiihhh', '<p><strong>Promo Lido Grosir kali ini setiap pembelian FLUFFY Baby Diapers isi 20 FREE 1 Hansanitizer</strong><br />\r\nPopok buat si kecil, jangan coba coba ya bundaa????<br />\r\n<br />\r\nFLUFFY certified lebih Lembut, Bebas Iritasi, 100% dari bahan yang aman untuk kulit si kecil<br />\r\n<em>Free handsanitizer BEBASKAN TANGAN BUNDA DARI KUMAN sebelum dan setelah gantiin popok</em>????<br />\r\n<br />\r\nBONUS TERBATAS, BELI SEKARANG JUGA<br />\r\nPromo tersedia di cabang Lido Grosir<br />\r\n???? Kandangan<br />\r\n???? Wonosobo<br />\r\n???? Kaloran<br />\r\n???? Borobudur<br />\r\n???? Sumowono<br />\r\n???? Tembarak<br />\r\n<br />\r\n<a href="https://www.instagram.com/explore/tags/lido/">#lido</a> <a href="https://www.instagram.com/explore/tags/lido29/">#lido29</a> <a href="https://www.instagram.com/explore/tags/lidogrosir/">#lidogrosir</a> <a href="https://www.instagram.com/explore/tags/promolido/">#promolido</a> <a href="https://www.instagram.com/explore/tags/promolidogrosir/">#promolidogrosir</a> <a href="https://www.instagram.com/explore/tags/promo/">#promo</a> <a href="https://www.instagram.com/explore/tags/fluffy/">#fluffy</a> <a href="https://www.instagram.com/explore/tags/promofluffy/">#promofluffy</a> <a href="https://www.instagram.com/explore/tags/lidokandangan/">#lidokandangan</a> <a href="https://www.instagram.com/explore/tags/lidowonosobo/">#lidowonosobo</a> <a href="https://www.instagram.com/explore/tags/lidokaloran/">#lidokaloran</a> <a href="https://www.instagram.com/explore/tags/lidoborobudur/">#lidoborobudur</a> <a href="https://www.instagram.com/explore/tags/lidosumowono/">#lidosumowono</a> <a href="https://www.instagram.com/explore/tags/lidotembarak/">#lidotembarak</a> <a href="https://www.instagram.com/explore/tags/temanggung/">#temanggung</a> <a href="https://www.instagram.com/explore/tags/magelang/">#magelang</a> <a href="https://www.instagram.com/explore/tags/semarang/">#semarang</a> <a href="https://www.instagram.com/explore/tags/wonosobo/">#wonosobo</a></p>\r\n', 'admin', 1703726570, 'AAW2JL.jpg'),
+(7, 'kiamat sudah dekat', '<p>&lt;section id=&quot;stats-counter&quot; class=&quot;stats-counter section-bg&quot;&gt;x<br />\r\n&nbsp; &nbsp; &nbsp; &lt;div class=&quot;container&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;row&quot;&gt;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;col-auto&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;stats-item d-flex align-items-center w-100 h-100&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i class=&quot;bi bi-database color-blue flex-shrink-0&quot;&gt;&lt;/i&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span data-purecounter-start=&quot;0&quot; data-purecounter-end=&quot;232&quot; data-purecounter-duration=&quot;1&quot;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; class=&quot;purecounter&quot;&gt;&lt;/span&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Jumlah Employee&lt;/p&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- End Stats Item --&gt;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;col-auto&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;stats-item d-flex align-items-center w-100 h-100&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i class=&quot;bi bi-journal-richtext color-orange flex-shrink-0&quot;&gt;&lt;/i&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span data-purecounter-start=&quot;0&quot; data-purecounter-end=&quot;521&quot; data-purecounter-duration=&quot;1&quot;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; class=&quot;purecounter&quot;&gt;&lt;/span&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Bisnis Unit&lt;/p&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- End Stats Item --&gt;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;col-auto&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;stats-item d-flex align-items-center w-100 h-100&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i class=&quot;bi bi-headset color-green flex-shrink-0&quot;&gt;&lt;/i&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span data-purecounter-start=&quot;0&quot; data-purecounter-end=&quot;146&quot; data-purecounter-duration=&quot;1&quot;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; class=&quot;purecounter&quot;&gt;&lt;/span&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Offline Store&lt;/p&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- End Stats Item --&gt;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;col-auto&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;stats-item d-flex align-items-center w-100 h-100&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i class=&quot;bi bi-people color-pink flex-shrink-0&quot;&gt;&lt;/i&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span data-purecounter-start=&quot;0&quot; data-purecounter-end=&quot;15&quot; data-purecounter-duration=&quot;1&quot;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; class=&quot;purecounter&quot;&gt;&lt;/span&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;SKU Brants&lt;/p&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- End Stats Item --&gt;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;col-auto&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;stats-item d-flex align-items-center w-100 h-100&quot;&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;i class=&quot;bi bi-box-arrow-in-down&quot;&gt;&lt;/i&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span data-purecounter-start=&quot;0&quot; data-purecounter-end=&quot;20&quot; data-purecounter-duration=&quot;1&quot;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; class=&quot;purecounter&quot;&gt;&lt;/span&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Total Supplier&lt;/p&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- End Stats Item --&gt;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />\r\n&nbsp; &nbsp; &lt;/section&gt;</p>\r\n', 'Marsha', 1703812964, 'HTWLLI.JPG'),
+(8, 'mugiwara', '<p>Pertama-tama, apa arti mugiwara? Maknanya sederhana kok:&nbsp;<strong>topi jerami</strong>. Luffy memang biasanya terlihat memakai mugiwara atau topi jerami, ke manapun dia pergi. Topi itu pun menjadi ciri khas penampilan Luffy.</p>\r\n', 'Marsha', 1703832715, 'S0KSIP.jpg'),
+(9, 'Vinsmoke reiju', '<p>Salah satu anggota keluarga Vinsmoke dengan moral yang paling baik. Berhubung Ichiji, Niji, dan Yonji terasa tanpa perasaan dan bisa bersikap kejam,&nbsp;<strong>Reiju termasuk anggota keluarga Vinsmoke dengan moral yang paling baik</strong>.</p>\r\n', 'Marsha', 1703832878, 'H5YPWH.jpg');
 
 -- --------------------------------------------------------
 
@@ -96,14 +98,17 @@ CREATE TABLE `budaya` (
   `keterangan` text NOT NULL,
   `icon` varchar(225) NOT NULL,
   `image` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `budaya`
 --
 
 INSERT INTO `budaya` (`id`, `budaya`, `keterangan`, `icon`, `image`) VALUES
-(1, 'LINCAH ( AGILE AND INNOVATIVE )', 'Kami bergerak mengikuti perubahan perilaku konsumen dan terus berproses menciptakan nilai kreasi untuk pelanggan.\n\n', 'bi bi-easel flex-shrink-0', 'features-2.jpg');
+(1, 'LINCAH ( AGILE AND INNOVATIVE )', 'Kami bergerak mengikuti perubahan perilaku konsumen dan terus berproses menciptakan nilai kreasi untuk pelanggan.', 'bi bi-easel flex-shrink-0', '2.JPG'),
+(2, 'Oshiin Zee', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus atque optio architecto quam fuga placeat quas reiciendis dolor eius.', '', 'B2J4PV.JPG'),
+(3, 'Oshiin Marsha', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus atque optio architecto quam fuga placeat quas reiciendis dolor eius.', '', '5C34EG.JPG'),
+(4, 'Ci Shanii', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus atque optio architecto quam fuga placeat quas reiciendis dolor eius.', '', '9JBAN4.jpg');
 
 -- --------------------------------------------------------
 
@@ -115,7 +120,7 @@ CREATE TABLE `busines_unit` (
   `id` int(11) NOT NULL,
   `badan_hukum` varchar(225) NOT NULL,
   `bisnis` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `busines_unit`
@@ -125,6 +130,56 @@ INSERT INTO `busines_unit` (`id`, `badan_hukum`, `bisnis`) VALUES
 (1, 'FMCG1', 'CV Kukuh Tentrem Santoso\r\nCV Ponokawan Kukuh Rahardja\r\nCV Prameswari Dharma Daryono\r\nCV Ethes Widi Elfarin\r\nCV Rukun Kukuh Remboko'),
 (3, 'Business Development', 'PT Ethes Teknologi Makmur\r\nCV Dagienks Seindo Berkarya\r\n'),
 (5, 'Materials', 'CV Dewaruci Hutama\r\nPT Bimasuci Dagang Internasional\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `comment`
+--
+
+CREATE TABLE `comment` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `subject` varchar(50) NOT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `comment`
+--
+
+INSERT INTO `comment` (`id`, `name`, `email`, `subject`, `message`) VALUES
+(1, 'marsha', 'daffafirja6@gmail.com', 'Hello world', 'absfa;sda\r\n'),
+(2, 'marsha', 'daffafirja6@gmail.com', 'Hello world', 'dalbsdaaa'),
+(3, 'marsha', 'daffafirja6@gmail.com', 'Hello world', 'dvalsasda'),
+(4, 'aflsbda', 'daffafirja6@gmail.com', ';fab;a', 'afba'),
+(5, 'marsha', 'daffafirja6@gmail.com', 'Hello world', 'sbfs;ds'),
+(6, 'marsha', 'daffafirja6@gmail.com', 'Hello world', 'aldblasa'),
+(7, 'marsha', 'daffafirja6@gmail.com', 'Hello world', 'avfdkasa'),
+(8, 'marsha', 'daffafirja6@gmail.com', 'Hello world', ' width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `address` text NOT NULL,
+  `email_us` varchar(50) NOT NULL,
+  `number_call` varchar(50) NOT NULL,
+  `maps` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `contact`
+--
+
+INSERT INTO `contact` (`id`, `address`, `email_us`, `number_call`, `maps`, `created_at`) VALUES
+(2, 'Krajan 1 Kandangan, 001/007, Krajan, Kandangan, Temanggung Regency, Central Java 56281', 'ethestech@gmail.com', '+62857-29345524', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.877122416936!2d110.18245547389284!3d-7.254823171268284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70791f5b1b8d99%3A0x50861ef0183eb93f!2sEthes%20Tech!5e0!3m2!1sid!2sid!4v1703900830330!5m', '2023-12-30 01:53:08');
 
 -- --------------------------------------------------------
 
@@ -140,7 +195,7 @@ CREATE TABLE `direksi` (
   `email` varchar(225) NOT NULL,
   `telepon` varchar(50) NOT NULL,
   `foto` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `direksi`
@@ -164,7 +219,7 @@ CREATE TABLE `distributor` (
   `image` varchar(225) NOT NULL,
   `tittle` varchar(225) NOT NULL,
   `link` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `distributor`
@@ -189,7 +244,7 @@ CREATE TABLE `komisaris` (
   `email` varchar(225) NOT NULL,
   `telepon` varchar(50) NOT NULL,
   `image` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `komisaris`
@@ -198,20 +253,6 @@ CREATE TABLE `komisaris` (
 INSERT INTO `komisaris` (`id`, `jabatan`, `nama_komisaris`, `alamat`, `email`, `telepon`, `image`) VALUES
 (1, 'Dewan Komisaris', 'Bapak Suwahdi', 'Jl. Contoh No. 1234', 'admin@gmail.com', '0987643211446', 'team-1.jpg'),
 (2, 'Dewan Komisaris', 'Ibu Miskiyah', 'Jl. Contoh No. 123', 'admin@gmail.com', '0987643211446', '9FNTR2.jpg');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `kontak`
---
-
-CREATE TABLE `kontak` (
-  `id` int(11) NOT NULL,
-  `alamat` text NOT NULL,
-  `telepon` varchar(225) NOT NULL,
-  `email` varchar(225) NOT NULL,
-  `maps` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -226,7 +267,7 @@ CREATE TABLE `offline_store` (
   `link_alamat` varchar(225) NOT NULL,
   `outlet` varchar(225) NOT NULL,
   `alamat_outlet` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `offline_store`
@@ -247,7 +288,7 @@ CREATE TABLE `organisasi` (
   `id` int(11) NOT NULL,
   `nama_struktur` varchar(225) NOT NULL,
   `image` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `organisasi`
@@ -268,7 +309,7 @@ CREATE TABLE `plan` (
   `id` int(11) NOT NULL,
   `tahun` year(4) NOT NULL,
   `rencana` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `plan`
@@ -289,7 +330,7 @@ INSERT INTO `plan` (`id`, `tahun`, `rencana`) VALUES
 CREATE TABLE `role` (
   `as_id` int(11) NOT NULL,
   `role` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `role`
@@ -309,7 +350,7 @@ CREATE TABLE `sejarah` (
   `id_sejarah` int(11) NOT NULL,
   `sejarah` text NOT NULL,
   `image` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `sejarah`
@@ -329,7 +370,7 @@ CREATE TABLE `service` (
   `nama_layanan` varchar(225) NOT NULL,
   `deskripsi_layanan` text NOT NULL,
   `foto` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `service`
@@ -351,7 +392,7 @@ CREATE TABLE `struktur_grup` (
   `id` int(11) NOT NULL,
   `image` varchar(225) NOT NULL,
   `keterangan` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `struktur_grup`
@@ -373,7 +414,7 @@ CREATE TABLE `tampilan` (
   `logo` varchar(225) NOT NULL,
   `logo_text` varchar(225) NOT NULL,
   `background` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `tampilan`
@@ -392,14 +433,14 @@ CREATE TABLE `tentang` (
   `id_tentang` int(11) NOT NULL,
   `tentang` text NOT NULL,
   `image` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `tentang`
 --
 
 INSERT INTO `tentang` (`id_tentang`, `tentang`, `image`) VALUES
-(2, '<p>All editor features were divided into two main categories, available in the sidebar on the left:</p>\r\n\r\n<ul>\r\n	<li><strong>End-user Features</strong>&nbsp;&ndash; functionality that your users will see and use.</li>\r\n	<li><strong>Integration Features</strong>&nbsp;&ndash; more advanced stuff that a CKEditor 4 integrator might need.</li>\r\n</ul>\r\n\r\n<p>The samples are complemented with&nbsp;<a href=\"https://ckeditor.com/docs/ckeditor4/latest/features/index.html\">relevant documentation articles</a>&nbsp;which explain the features even more broadly &mdash; these are always available in the&nbsp;<strong>Documentation</strong>&nbsp;link next to the sample header. You can also find additional reading in the&nbsp;<strong>Related Features</strong>&nbsp;section down below the sample.</p>\r\n\r\n<p>Most importantly, though, you can view and copy the exact source code of each editor demo in the&nbsp;<strong>Get Sample Source Code</strong>&nbsp;section at the bottom of the sample pages. This code uses the&nbsp;<a href=\"https://cdn.ckeditor.com/\">CKEditor CDN</a>, so you can save it and run locally without the need to download CKEditor 4 itself!</p>\r\n', 'U9BFRC.jpg');
+(2, '<p>All editor features were divided into two main categories, available in the sidebar on the left:</p>\r\n\r\n<ul>\r\n	<li><strong>End-user Features</strong>&nbsp;&ndash; functionality that your users will see and use.</li>\r\n	<li><strong>Integration Features</strong>&nbsp;&ndash; more advanced stuff that a CKEditor 4 integrator might need.</li>\r\n</ul>\r\n\r\n<p>The samples are complemented with&nbsp;<a href="https://ckeditor.com/docs/ckeditor4/latest/features/index.html">relevant documentation articles</a>&nbsp;which explain the features even more broadly &mdash; these are always available in the&nbsp;<strong>Documentation</strong>&nbsp;link next to the sample header. You can also find additional reading in the&nbsp;<strong>Related Features</strong>&nbsp;section down below the sample.</p>\r\n\r\n<p>Most importantly, though, you can view and copy the exact source code of each editor demo in the&nbsp;<strong>Get Sample Source Code</strong>&nbsp;section at the bottom of the sample pages. This code uses the&nbsp;<a href="https://cdn.ckeditor.com/">CKEditor CDN</a>, so you can save it and run locally without the need to download CKEditor 4 itself!</p>\r\n', 'U9BFRC.jpg');
 
 -- --------------------------------------------------------
 
@@ -416,7 +457,7 @@ CREATE TABLE `user` (
   `password` varchar(225) NOT NULL,
   `as_id` int(11) NOT NULL,
   `date_created` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `user`
@@ -437,7 +478,7 @@ CREATE TABLE `visi_misi` (
   `visi` varchar(225) NOT NULL,
   `misi` text NOT NULL,
   `image` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `visi_misi`
@@ -451,250 +492,240 @@ INSERT INTO `visi_misi` (`id`, `visi`, `misi`, `image`) VALUES
 --
 
 --
--- Indeks untuk tabel `admin_menu`
+-- Indexes for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `banner_img`
+-- Indexes for table `banner_img`
 --
 ALTER TABLE `banner_img`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blog`
+-- Indexes for table `blog`
 --
 ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `budaya`
+-- Indexes for table `budaya`
 --
 ALTER TABLE `budaya`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `busines_unit`
+-- Indexes for table `busines_unit`
 --
 ALTER TABLE `busines_unit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `direksi`
+-- Indexes for table `comment`
+--
+ALTER TABLE `comment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `direksi`
 --
 ALTER TABLE `direksi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `distributor`
+-- Indexes for table `distributor`
 --
 ALTER TABLE `distributor`
   ADD PRIMARY KEY (`id_distributor`);
 
 --
--- Indeks untuk tabel `komisaris`
+-- Indexes for table `komisaris`
 --
 ALTER TABLE `komisaris`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `kontak`
---
-ALTER TABLE `kontak`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `offline_store`
+-- Indexes for table `offline_store`
 --
 ALTER TABLE `offline_store`
   ADD PRIMARY KEY (`id_store`);
 
 --
--- Indeks untuk tabel `organisasi`
+-- Indexes for table `organisasi`
 --
 ALTER TABLE `organisasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `plan`
+-- Indexes for table `plan`
 --
 ALTER TABLE `plan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `role`
+-- Indexes for table `role`
 --
 ALTER TABLE `role`
   ADD PRIMARY KEY (`as_id`);
 
 --
--- Indeks untuk tabel `sejarah`
+-- Indexes for table `sejarah`
 --
 ALTER TABLE `sejarah`
   ADD PRIMARY KEY (`id_sejarah`);
 
 --
--- Indeks untuk tabel `service`
+-- Indexes for table `service`
 --
 ALTER TABLE `service`
   ADD PRIMARY KEY (`id_service`);
 
 --
--- Indeks untuk tabel `struktur_grup`
+-- Indexes for table `struktur_grup`
 --
 ALTER TABLE `struktur_grup`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tampilan`
+-- Indexes for table `tampilan`
 --
 ALTER TABLE `tampilan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tentang`
+-- Indexes for table `tentang`
 --
 ALTER TABLE `tentang`
   ADD PRIMARY KEY (`id_tentang`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `visi_misi`
+-- Indexes for table `visi_misi`
 --
 ALTER TABLE `visi_misi`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin_menu`
+-- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT untuk tabel `banner_img`
+-- AUTO_INCREMENT for table `banner_img`
 --
 ALTER TABLE `banner_img`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
 --
--- AUTO_INCREMENT untuk tabel `blog`
+-- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT untuk tabel `budaya`
+-- AUTO_INCREMENT for table `budaya`
 --
 ALTER TABLE `budaya`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT untuk tabel `busines_unit`
+-- AUTO_INCREMENT for table `busines_unit`
 --
 ALTER TABLE `busines_unit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
--- AUTO_INCREMENT untuk tabel `direksi`
+-- AUTO_INCREMENT for table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `direksi`
 --
 ALTER TABLE `direksi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
--- AUTO_INCREMENT untuk tabel `distributor`
+-- AUTO_INCREMENT for table `distributor`
 --
 ALTER TABLE `distributor`
-  MODIFY `id_distributor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
+  MODIFY `id_distributor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
--- AUTO_INCREMENT untuk tabel `komisaris`
+-- AUTO_INCREMENT for table `komisaris`
 --
 ALTER TABLE `komisaris`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
--- AUTO_INCREMENT untuk tabel `kontak`
---
-ALTER TABLE `kontak`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT untuk tabel `offline_store`
+-- AUTO_INCREMENT for table `offline_store`
 --
 ALTER TABLE `offline_store`
   MODIFY `id_store` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
 --
--- AUTO_INCREMENT untuk tabel `organisasi`
+-- AUTO_INCREMENT for table `organisasi`
 --
 ALTER TABLE `organisasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT untuk tabel `plan`
+-- AUTO_INCREMENT for table `plan`
 --
 ALTER TABLE `plan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT untuk tabel `role`
+-- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
   MODIFY `as_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
--- AUTO_INCREMENT untuk tabel `sejarah`
+-- AUTO_INCREMENT for table `sejarah`
 --
 ALTER TABLE `sejarah`
   MODIFY `id_sejarah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
 --
--- AUTO_INCREMENT untuk tabel `service`
+-- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
-
+  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
--- AUTO_INCREMENT untuk tabel `struktur_grup`
+-- AUTO_INCREMENT for table `struktur_grup`
 --
 ALTER TABLE `struktur_grup`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
--- AUTO_INCREMENT untuk tabel `tampilan`
+-- AUTO_INCREMENT for table `tampilan`
 --
 ALTER TABLE `tampilan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
--- AUTO_INCREMENT untuk tabel `tentang`
+-- AUTO_INCREMENT for table `tentang`
 --
 ALTER TABLE `tentang`
   MODIFY `id_tentang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
--- AUTO_INCREMENT untuk tabel `visi_misi`
+-- AUTO_INCREMENT for table `visi_misi`
 --
 ALTER TABLE `visi_misi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

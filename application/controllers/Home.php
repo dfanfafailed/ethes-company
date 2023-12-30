@@ -34,7 +34,9 @@ class Home extends CI_Controller {
 		$data['tentang'] = $this->db->get('tentang')->result_array();
 		$data['visimisi'] = $this->db->get('visi_misi')->result_array();
 		$data['budaya'] = $this->db->get('budaya')->result_array();
+		$data['blog'] = $this->Berita_model->berita();
 
+		
 		$this->load->view('template/home_header', $data);
 		$this->load->view('template/home_navbar', $data);
 		$this->load->view('home/beranda', $data);
@@ -126,6 +128,7 @@ class Home extends CI_Controller {
 	public function contact() 
 	{
 		$data['tampilan'] = $this->db->get('tampilan')->result_array();
+		$data['contact'] = $this->db->get('contact')->result_array();
 		$this->load->view('template/home_header');
 		$this->load->view('template/home_navbar', $data);
 		$this->load->view('home/contact', $data);
@@ -143,8 +146,6 @@ class Home extends CI_Controller {
 		$this->load->view('home/plan', $data);
 		$this->load->view('template/home_footer', $data);
 	}
-
-	
 
 
 }

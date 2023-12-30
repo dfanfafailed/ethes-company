@@ -50,7 +50,7 @@
 
               </div>
             </div>
-          </div><!-- End post list item -->
+          </div>
           <?php endforeach; ?>
 
         </div><!-- End blog posts list -->

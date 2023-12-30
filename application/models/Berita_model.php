@@ -68,4 +68,13 @@ public function hapus($berita, $id){
     $result = $this->db->delete($berita, ['id' => $id]);
     return $result;
 }
+
+public function berita() {
+    $this->db->select('*');
+    $this->db->from('blog');
+    $this->db->order_by('created_at', 'desc');
+    $this->db->limit(3);
+    $query = $this->db->get(); 
+    return $query->result();
+}
 }

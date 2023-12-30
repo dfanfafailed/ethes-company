@@ -104,6 +104,18 @@
               <i class="mdi mdi-newspaper link-icon"></i>
             </a>
           </li>
+          <li>
+            <a href="<?= base_url('contact') ;?>">
+              <span class="link-title">Contact</span>
+              <i class="mdi mdi-newspaper link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="<?= base_url('comment') ;?>">
+              <span class="link-title">Comment</span>
+              <i class="mdi mdi-newspaper link-icon"></i>
+            </a>
+          </li>
           <li class="nav-category-divider">TAMPILAN</li>
           <li>
             <a href="#Tampilan" data-toggle="collapse" aria-expanded="false">
